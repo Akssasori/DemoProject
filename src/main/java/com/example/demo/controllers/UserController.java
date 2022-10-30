@@ -16,10 +16,12 @@ public class UserController {
     public UserDto registration(@Valid
                                 @RequestBody
                                 @JsonView(UserDto.UserView.RegistrationPost.class) UserDto userDto) {
+        System.out.println(System.currentTimeMillis());
 
         System.out.println(userDto);
         var user = new UserDto();
         user.setUserName("DEFAULT");
+        System.out.println(System.currentTimeMillis());
         return user;
 
     }
@@ -30,8 +32,10 @@ public class UserController {
                          @RequestBody
                          @JsonView(UserDto.UserView.Login.class) UserDto userDto) {
 
+        System.out.println(System.currentTimeMillis());
         var user = new UserDto();
-        user.setUserName("DEFAULT");
+        user.setPassword(userDto.getPassword());
+        System.out.println(System.currentTimeMillis());
         return user;
 
     }
