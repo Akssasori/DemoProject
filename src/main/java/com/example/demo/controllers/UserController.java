@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.controllers;
 
 import com.example.demo.dto.UserDto;
 import com.fasterxml.jackson.annotation.JsonView;
