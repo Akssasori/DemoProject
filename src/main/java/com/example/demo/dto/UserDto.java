@@ -16,9 +16,9 @@ public class UserDto {
         public static interface Login {}
     }
 
-//    @NotBlank(groups = {UserView.RegistrationPost.class}, message = "UserName não pode estar em branco ou nulo")
+    @NotBlank(groups = {UserView.RegistrationPost.class}, message = "UserName não pode estar em branco ou nulo")
     @JsonView(UserView.RegistrationPost.class)
-    @NotBlank(message = "NÃO DEVE SER VAZIO PORRA")
+//    @NotBlank(message = "NÃO DEVE SER VAZIO PORRA")
     private String userName;
 
     @NotEmpty(groups = {UserView.Login.class}, message = "Password não pode estar vazio")
